@@ -1,0 +1,78 @@
+@import "./scss/_config.scss";
+@import "./scss/_home.scss";
+@import "./scss/_menu.scss";
+@import "./about/_about.scss";
+@import "./project/_project.scss";
+@import "./contact/_contact.scss";
+@import "./scss/_responnsive.scss";
+
+
+
+
+
+
+body{
+background: $primary_color;
+color:set-Text-Color($primary_color);
+height: 100vh;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1;
+}
+//  html { font-size: 40px; } 
+
+
+
+h1,h2,h3{
+    font-weight: 400;
+}
+a{
+    color:set-Text-Color($primary_color);
+    text-decoration: none;
+
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+
+    
+}
+main{
+    height: 100%;
+    width: 100%;
+    
+
+    .social-icons{
+        position:fixed;
+        bottom: 1rem;
+        left:1rem;
+
+        a{
+            padding: 0.4rem;
+            // color:red;
+
+            @include transition-ease;
+            // z-index: 3;
+
+            &:hover{
+                color:$seconday-color;
+            }
+        }
+    }
+
+}
+
+footer{
+    font-size:1rem;
+    position:fixed;
+    bottom:0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color:set-Text-Color($primary_color);
+    // margin-left: 80%;
+    // float:right;
+    // z-index: -22;
+    // width: 100%;
+}

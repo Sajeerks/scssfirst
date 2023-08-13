@@ -1,0 +1,48 @@
+$primary_color:rgb(90, 79, 79);
+$seconday-color:orange;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin transition-ease {
+    transition:  all 0.5s ease-in-out;
+}
+
+@mixin alingler($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: yellow;
+
+}
+
+@function set-Text-Color($colour){
+    @if (lightness($colour) > 50) {
+        @return #000;// if backgorund is light dark text
+      } @else {
+        @return #ffffff;// if background is dark light text
+      }
+}
+
+@mixin media-md{
+    @media screen  and (min-width :768px){
+        @content
+    }
+};
+
+@mixin media-lg{
+    @media screen  and (min-width :1024px){
+        @content
+    }
+};
+
+@mixin media-xl{
+    @media screen  and (min-width :1600px){
+        @content
+    }
+};

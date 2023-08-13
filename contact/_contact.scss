@@ -1,0 +1,48 @@
+.contact{
+    height: 100%;
+    padding-top: 1vh;
+    overflow: hiddem;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, rgba($primary_color,0.9),  rgba($primary_color,0.2)),url("../img/bg-1.jpeg");
+    background-size:cover;
+    background-position: 30% 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h2{
+        color:$seconday-color;
+        font-size: 2rem;
+    }
+     &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1vh;
+
+     }
+//   &__list * > :not(div) {
+//         margin: 1vh; 
+//         color: $seconday-color;
+       
+//      }
+
+
+    //  &__list  div div:has(:not(i)){
+    //     color: red;
+
+    // }
+
+&__list *  {
+            margin: 1vh; 
+        color: $seconday-color;
+}
+&__list   i ~ div,&__list sup {
+    margin: 1vh; 
+    color: rgb(221, 221, 229);
+ }
+
+}
